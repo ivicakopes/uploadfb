@@ -1,28 +1,27 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
+
+ /*
  * @format
  * @flow
  */
 
 import React, {Component} from 'react';
-import {Platform, StyleSheet, Text, View} from 'react-native';
+import {AppRegistry, StyleSheet, Text, View} from 'react-native';
+import * as firebase from 'firebase';
 
-const instructions = Platform.select({
-  ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
-  android:
-    'Double tap R on your keyboard to reload,\n' +
-    'Shake or press menu button for dev menu',
-});
+const config = {
+  apiKey: "AIzaSyChwCMoXTDVpI-jdZe9sIY1CHAXLT1ei9g",
+  databaseURL: "https://uploadpicfb.firebaseio.com",
+  storageBucket: "uploadpicfb.appspot.com"
+};
+firebase.initializeApp(config);
 
-type Props = {};
-export default class App extends Component<Props> {
+export default class App extends Component {
   render() {
     return (
       <View style={styles.container}>
         <Text style={styles.welcome}>WELCOME !!! </Text>
         <Text style={styles.instructions}>Upload Picture to Firebase</Text>
+        <Text style={styles.instructions}>1. install firebase </Text>
       </View>
     );
   }
@@ -46,3 +45,5 @@ const styles = StyleSheet.create({
     marginBottom: 5,
   },
 });
+
+AppRegistry.registerComponent('App', () => App);
