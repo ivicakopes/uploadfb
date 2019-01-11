@@ -7,12 +7,15 @@
 import React, {Component} from 'react';
 import {AppRegistry, StyleSheet, Text, View} from 'react-native';
 import * as firebase from 'firebase';
+import RNFetchBlob from 'react-native-fetch-blob';
 
 const config = {
   apiKey: "AIzaSyChwCMoXTDVpI-jdZe9sIY1CHAXLT1ei9g",
   databaseURL: "https://uploadpicfb.firebaseio.com",
   storageBucket: "uploadpicfb.appspot.com"
 };
+
+
 firebase.initializeApp(config);
 
 export default class App extends Component {
@@ -22,6 +25,8 @@ export default class App extends Component {
         <Text style={styles.welcome}>WELCOME !!! </Text>
         <Text style={styles.instructions}>Upload Picture to Firebase</Text>
         <Text style={styles.instructions}>1. install firebase </Text>
+        <Text style={styles.instructions}>2. install react-native-image-crop-picker </Text>
+        <Text style={styles.instructions}>3. install react-native-image-fetch-blob </Text>
       </View>
     );
   }

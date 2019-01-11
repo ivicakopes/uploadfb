@@ -9,7 +9,9 @@
   "dependencies": {
     "firebase": "^5.7.3",
     "react": "16.6.3",
-    "react-native": "0.57.8"
+    "react-native": "0.57.8",
+    "react-native-fetch-blob": "^0.10.8",
+    "react-native-image-crop-picker": "^0.21.3"
   },
   "devDependencies": {
     "babel-jest": "23.6.0",
